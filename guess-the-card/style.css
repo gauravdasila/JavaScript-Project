@@ -1,0 +1,519 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* Reset style sheet ends here */
+
+
+
+body {
+    background: #00a651;
+}
+
+/* Card style */
+
+.card {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    width: 150px;
+    height: 220px;
+    border-radius: 10px;
+    background: #fff;
+    -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
+.card .logo , .spread .card p{
+    text-align: center;
+    font: 100px/220px Georgia, Times New Roman, serif;
+}
+
+div[class*='suit']:before {
+    position: absolute;
+    font-size: 50px;
+    left: 10px;
+    top: 5px;
+}
+   
+div[class*='suit']:after {
+    position: absolute;
+    font-size: 50px;
+    right: 10px;
+    bottom: 5px;
+}
+.suitdiamonds:before, .suitdiamonds:after {
+    content: "♦";
+    color: #ff0000;
+}
+
+.suithearts:before, .suithearts:after {
+    content: "♥";
+    color: #ff0000;
+}
+
+.suitclubs:before, .suitclubs:after {
+    content: "♣";
+    color: #000;
+}
+
+.suitspades:before, .suitspades:after {
+    content: "♠";
+    color: #000;
+}
+.suitdiamonds:before, .suitdiamonds:after {
+    content: "♦";
+    color: #ff0000;
+}
+
+.hand {
+    position: absolute !important;
+    bottom: 47px;
+    right: 130px;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card:hover {
+cursor: pointer;
+}
+.spread {
+    width: 150px;
+    height: 220px;
+    position: relative;
+}
+.spread > .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+.spread:hover .suitdiamonds {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    transition: all 0.5s ease;
+}
+.spread:hover .suithearts {
+    left: 30px;
+    top: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all 0.5s ease;
+}   
+.spread:hover .suitclubs {
+    left: 60px;
+    top: 5px;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+    transition: all 0.5s ease;
+}  
+.spread:hover .suitspades{  
+    left: 90px;
+    top: 10px;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+    transition: all 0.5s ease;
+}
+.spread > .card:hover {
+    -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+}
+
+
+/* custom */
+
+.container {
+    padding: 20px;
+}
+.deck {
+    position: relative;
+    width: 150px;
+    height: 220px;
+    transform: rotate(50deg);
+}
+.deck > .card {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    transition: all 0.5s ease;
+}
+.deck-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+.card2 , .card3 , .card4 , .card5 , .card6 {
+    transition: all 0.5s ease;
+}
+.deck:hover .card:nth-child(1) {
+    top: 0px;
+    transform: rotate(-20deg);
+    transition: all 0.5s ease; 
+}
+.deck:hover .card:nth-child(2) {
+    top: 20px;   
+    transform: rotate(-30deg);
+    transition: all 0.5s ease; 
+}
+.deck:hover .card:nth-child(3) {
+    top: 40px;
+    transform: rotate(-40deg);
+    transition: all 0.5s ease; 
+}
+.deck:hover .card:nth-child(4) {
+    top: 60px;
+    transform: rotate(-50deg);
+    transition: all 0.5s ease; 
+}
+.deck:hover .card:nth-child(5) {
+    top: 80px;
+    transform: rotate(-60deg);
+    transition: all 0.5s ease; 
+}
+.deck:hover .card:nth-child(6) {
+    top: 200px; 
+    top: 100px;
+    transform: rotate(-70deg);
+    transition: all 0.5s ease; 
+}
+.deck > .card:hover {
+    -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(0,0,0,0.8);
+    z-index: 9;
+    display: none;
+}
+
+
+.card .cardIdInfo:first-child {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-align: center;
+}
+.card .cardIdInfo:last-child {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+.cardIdInfo p {
+    font-size: 21px;
+    font-family: inherit;
+    font-weight: 600;
+}
+.result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+.modal {
+    display: none;
+}
+.show {
+    display: block !important;
+}
+.hide {
+    display: none !important;
+}
+
+
+
+
+  .pyro > .before, .pyro > .after {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    box-shadow: -120px -218.66667px blue, 248px -16.66667px #00ff84, 190px 16.33333px #002bff, -113px -308.66667px #ff009d, -109px -287.66667px #ffb300, -50px -313.66667px #ff006e, 226px -31.66667px #ff4000, 180px -351.66667px #ff00d0, -12px -338.66667px #00f6ff, 220px -388.66667px #99ff00, -69px -27.66667px #ff0400, -111px -339.66667px #6200ff, 155px -237.66667px #00ddff, -152px -380.66667px #00ffd0, -50px -37.66667px #00ffdd, -95px -175.66667px #a6ff00, -88px 10.33333px #0d00ff, 112px -309.66667px #005eff, 69px -415.66667px #ff00a6, 168px -100.66667px #ff004c, -244px 24.33333px #ff6600, 97px -325.66667px #ff0066, -211px -182.66667px #00ffa2, 236px -126.66667px #b700ff, 140px -196.66667px #9000ff, 125px -175.66667px #00bbff, 118px -381.66667px #ff002f, 144px -111.66667px #ffae00, 36px -78.66667px #f600ff, -63px -196.66667px #c800ff, -218px -227.66667px #d4ff00, -134px -377.66667px #ea00ff, -36px -412.66667px #ff00d4, 209px -106.66667px #00fff2, 91px -278.66667px #000dff, -22px -191.66667px #9dff00, 139px -392.66667px #a6ff00, 56px -2.66667px #0099ff, -156px -276.66667px #ea00ff, -163px -233.66667px #00fffb, -238px -346.66667px #00ff73, 62px -363.66667px #0088ff, 244px -170.66667px #0062ff, 224px -142.66667px #b300ff, 141px -208.66667px #9000ff, 211px -285.66667px #ff6600, 181px -128.66667px #1e00ff, 90px -123.66667px #c800ff, 189px 70.33333px #00ffc8, -18px -383.66667px #00ff33, 100px -6.66667px #ff008c;
+    -moz-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+    -webkit-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+    -o-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+    -ms-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+    animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards; }
+  
+  .pyro > .after {
+    -moz-animation-delay: 1.25s, 1.25s, 1.25s;
+    -webkit-animation-delay: 1.25s, 1.25s, 1.25s;
+    -o-animation-delay: 1.25s, 1.25s, 1.25s;
+    -ms-animation-delay: 1.25s, 1.25s, 1.25s;
+    animation-delay: 1.25s, 1.25s, 1.25s;
+    -moz-animation-duration: 1.25s, 1.25s, 6.25s;
+    -webkit-animation-duration: 1.25s, 1.25s, 6.25s;
+    -o-animation-duration: 1.25s, 1.25s, 6.25s;
+    -ms-animation-duration: 1.25s, 1.25s, 6.25s;
+    animation-duration: 1.25s, 1.25s, 6.25s; }
+  
+  @-webkit-keyframes bang {
+    from {
+      box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+  @-moz-keyframes bang {
+    from {
+      box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+  @-o-keyframes bang {
+    from {
+      box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+  @-ms-keyframes bang {
+    from {
+      box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+  @keyframes bang {
+    from {
+      box-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white, 0 0 white; } }
+  @-webkit-keyframes gravity {
+    to {
+      transform: translateY(200px);
+      -moz-transform: translateY(200px);
+      -webkit-transform: translateY(200px);
+      -o-transform: translateY(200px);
+      -ms-transform: translateY(200px);
+      opacity: 0; } }
+  @-moz-keyframes gravity {
+    to {
+      transform: translateY(200px);
+      -moz-transform: translateY(200px);
+      -webkit-transform: translateY(200px);
+      -o-transform: translateY(200px);
+      -ms-transform: translateY(200px);
+      opacity: 0; } }
+  @-o-keyframes gravity {
+    to {
+      transform: translateY(200px);
+      -moz-transform: translateY(200px);
+      -webkit-transform: translateY(200px);
+      -o-transform: translateY(200px);
+      -ms-transform: translateY(200px);
+      opacity: 0; } }
+  @-ms-keyframes gravity {
+    to {
+      transform: translateY(200px);
+      -moz-transform: translateY(200px);
+      -webkit-transform: translateY(200px);
+      -o-transform: translateY(200px);
+      -ms-transform: translateY(200px);
+      opacity: 0; } }
+  @keyframes gravity {
+    to {
+      transform: translateY(200px);
+      -moz-transform: translateY(200px);
+      -webkit-transform: translateY(200px);
+      -o-transform: translateY(200px);
+      -ms-transform: translateY(200px);
+      opacity: 0; } }
+  @-webkit-keyframes position {
+    0%, 19.9% {
+      margin-top: 10%;
+      margin-left: 40%; }
+  
+    20%, 39.9% {
+      margin-top: 40%;
+      margin-left: 30%; }
+  
+    40%, 59.9% {
+      margin-top: 20%;
+      margin-left: 70%; }
+  
+    60%, 79.9% {
+      margin-top: 30%;
+      margin-left: 20%; }
+  
+    80%, 99.9% {
+      margin-top: 30%;
+      margin-left: 80%; } }
+  @-moz-keyframes position {
+    0%, 19.9% {
+      margin-top: 10%;
+      margin-left: 40%; }
+  
+    20%, 39.9% {
+      margin-top: 40%;
+      margin-left: 30%; }
+  
+    40%, 59.9% {
+      margin-top: 20%;
+      margin-left: 70%; }
+  
+    60%, 79.9% {
+      margin-top: 30%;
+      margin-left: 20%; }
+  
+    80%, 99.9% {
+      margin-top: 30%;
+      margin-left: 80%; } }
+  @-o-keyframes position {
+    0%, 19.9% {
+      margin-top: 10%;
+      margin-left: 40%; }
+  
+    20%, 39.9% {
+      margin-top: 40%;
+      margin-left: 30%; }
+  
+    40%, 59.9% {
+      margin-top: 20%;
+      margin-left: 70%; }
+  
+    60%, 79.9% {
+      margin-top: 30%;
+      margin-left: 20%; }
+  
+    80%, 99.9% {
+      margin-top: 30%;
+      margin-left: 80%; } }
+  @-ms-keyframes position {
+    0%, 19.9% {
+      margin-top: 10%;
+      margin-left: 40%; }
+  
+    20%, 39.9% {
+      margin-top: 40%;
+      margin-left: 30%; }
+  
+    40%, 59.9% {
+      margin-top: 20%;
+      margin-left: 70%; }
+  
+    60%, 79.9% {
+      margin-top: 30%;
+      margin-left: 20%; }
+  
+    80%, 99.9% {
+      margin-top: 30%;
+      margin-left: 80%; } }
+  @keyframes position {
+    0%, 19.9% {
+      margin-top: 10%;
+      margin-left: 40%; }
+  
+    20%, 39.9% {
+      margin-top: 40%;
+      margin-left: 30%; }
+  
+    40%, 59.9% {
+      margin-top: 20%;
+      margin-left: 70%; }
+  
+    60%, 79.9% {
+      margin-top: 30%;
+      margin-left: 20%; }
+  
+    80%, 99.9% {
+      margin-top: 30%;
+      margin-left: 80%; } }
+  

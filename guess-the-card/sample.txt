@@ -1,0 +1,23 @@
+function cardColor() {
+    for(var i = 0 ; i < card.length ; i++) {
+        var cardLogo = card[i].querySelector(".logo");
+        if(cardLogo.innerHTML == "♦" || cardLogo.innerHTML == "♥" || cardLogo.innerHTML == "&#9829;" || cardLogo.innerHTML == "&#9830;") {
+            card[i].querySelectorAll("p").forEach(function(item) {
+                item.style.color = "#ff0000";
+            });
+            cardLogo.style.color = "#ff0000";
+        } else {
+            card[i].querySelectorAll("p").forEach(function(item) {
+                item.style.color = "#000000";
+            });
+            cardLogo.style.color = "#000000";
+        }
+    }
+}
+cardColor();
+
+function shuffle() {
+    // for(let i = this.children.length ; i >= 0  ; i-- ) {
+    //     this.appendChild(this.children[Math.floor(Math.random() * i)]);
+    // }
+}
